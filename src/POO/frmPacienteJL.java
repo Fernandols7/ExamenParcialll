@@ -143,13 +143,13 @@ public class frmPacienteJL extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
-    lista.add(new PacienteJL(
-         txtNombre1.getText(),  
-         txtEdad.getText(),
-         txtDireccion.getText(),
-         txtNoHistorial.getText(),
-         txtEnfermedad.getText()
-     ));  
+        lista.add(new PacienteJL(
+              txtNoHistorial.getText(),  
+              txtEnfermedad.getText(),  
+              txtNombre1.getText(),      
+              txtEdad.getText(),    
+              txtDireccion.getText()     
+        ));
         
         mostrarPaciente();
     }//GEN-LAST:event_btnAgregarActionPerformed

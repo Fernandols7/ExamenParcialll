@@ -52,7 +52,7 @@ public class PacienteJL extends PersonaJL{
         public void resultados() {
         System.out.println("Nombre: " + getNombreJL());
         System.out.println("Edad: " + getEdadJL());
-        System.out.println("Dirección: " + getDireccionJL());
+        System.out.println("Direccion: " + getDireccionJL());
         System.out.println("Nro Historial: " + getNroHistorialJL());
         System.out.println("Enfermedad: " + getEnfermedadJL());
     }
