@@ -31,5 +31,12 @@ public class MedicoJL extends PersonaJL{
         this.aniosExperienciaJL = aniosExperienciaJL;
     }
     
+    public void resultados() {
+        System.out.println("Nombre: " + getNombreJL());
+        System.out.println("Edad: " + getEdadJL());
+        System.out.println("Dirección: " + getDireccionJL());
+        System.out.println("Especialidad: " + getEspecialidadJL());
+        System.out.println("Años de Experiencia: " + getAniosExperienciaJL());
+    }
     
 }

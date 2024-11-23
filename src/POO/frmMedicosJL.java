@@ -4,17 +4,26 @@
  */
 package POO;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author Charly Cimino
  */
 public class frmMedicosJL extends javax.swing.JFrame {
+    List<MedicoJL> lista = new ArrayList<>();
 
     /**
      * Creates new form frmGestionMedicaJL
      */
     public frmMedicosJL() {
         initComponents();
+    }
+    
+    public void mostrarMedico(){
+         for (MedicoJL item : lista) {
+             item.resultados();
+            }
     }
 
     /**
@@ -36,7 +45,8 @@ public class frmMedicosJL extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         txtEspecialidad = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtExperiencia = new javax.swing.JTextField();
+        txtExperienciaM = new javax.swing.JTextField();
+        btnAgregarM = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +62,13 @@ public class frmMedicosJL extends javax.swing.JFrame {
         jLabel5.setText("Especialidad");
 
         jLabel6.setText("Años de Experiencia");
+
+        btnAgregarM.setText("Agregar");
+        btnAgregarM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarMActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +95,8 @@ public class frmMedicosJL extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtExperiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtExperienciaM, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnAgregarM)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -110,9 +128,11 @@ public class frmMedicosJL extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtExperiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtExperienciaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnAgregarM)
+                .addContainerGap(16, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(67, 67, 67)
@@ -122,6 +142,18 @@ public class frmMedicosJL extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMActionPerformed
+        // TODO add your handling code here:
+        lista.add(new MedicoJL(
+        txtNombre1.getText(),  
+        txtEdad.getText(),    
+        txtDireccion.getText()
+    ));    
+        
+        mostrarMedico();
+    }  
+    }//GEN-LAST:event_btnAgregarMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +192,7 @@ public class frmMedicosJL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAgregarM;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -169,7 +202,7 @@ public class frmMedicosJL extends javax.swing.JFrame {
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEspecialidad;
-    private javax.swing.JTextField txtExperiencia;
+    private javax.swing.JTextField txtExperienciaM;
     private javax.swing.JTextField txtNombre1;
     // End of variables declaration//GEN-END:variables
 }

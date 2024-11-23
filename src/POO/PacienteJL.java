@@ -30,7 +30,31 @@ public class PacienteJL extends PersonaJL{
     public void setEnfermedadJL(String enfermedadJL) {
         this.enfermedadJL = enfermedadJL;
     }
+
+    public String getEdadJL() {
+        return edadJL;
+    }
+
+    public void setEdadJL(String edadJL) {
+        this.edadJL = edadJL;
+    }
+
+    public String getDireccionJL() {
+        return direccionJL;
+    }
+
+    public void setDireccionJL(String direccionJL) {
+        this.direccionJL = direccionJL;
+    }
+
+
     
-    
+        public void resultados() {
+        System.out.println("Nombre: " + getNombreJL());
+        System.out.println("Edad: " + getEdadJL());
+        System.out.println("Dirección: " + getDireccionJL());
+        System.out.println("Nro Historial: " + getNroHistorialJL());
+        System.out.println("Enfermedad: " + getEnfermedadJL());
+    }
 
 }

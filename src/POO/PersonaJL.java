@@ -8,8 +8,8 @@ package POO;
 public class PersonaJL {
     
     private String nombreJL;
-    private String edadJL;
-    private String direccionJL;
+    String edadJL;
+    String direccionJL;
 
     public PersonaJL(String nombreJL, String edadJL, String direccionJL) {
         this.nombreJL = nombreJL;
